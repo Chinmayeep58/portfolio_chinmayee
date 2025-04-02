@@ -1,0 +1,144 @@
+/* Global Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Main Container */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden; /* Ensures no extra space */
+}
+
+/* Left: Profile Picture */
+.picture-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.picture-container img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Right: Text */
+.text-container {
+  flex: 1;
+  text-align: left;
+  padding-left: 20px;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.text-container h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.text-container p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* 3D Canvas */
+/* canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh; 
+  z-index: -1; /
+} */
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+      padding: 15px;
+  }
+  
+  .text-container h1 {
+      font-size: 1.8rem;
+  }
+  
+  .text-container p {
+      font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+  }
+
+  .picture-container {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .picture-container img {
+      width: 60%;
+      height: auto;
+      max-width: 200px;
+  }
+
+  .text-container {
+      width: 90%;
+      text-align: center;
+      padding: 10px;
+  }
+
+  .text-container h1 {
+      font-size: 1.6rem;
+  }
+
+  .text-container p {
+      font-size: 1rem;
+  }
+}
+
+/* Extra Small Screens (Mobile) */
+@media (max-width: 480px) {
+  .container {
+      padding: 4px;
+  }
+
+  .text-container {
+      width: 100%;
+      padding: 10px;
+  }
+
+  .text-container h1 {
+      font-size: 1.4rem;
+  }
+
+  .text-container p {
+      font-size: 0.9rem;
+  }
+
+  .picture-container img {
+      width: 70%;
+      max-width: 180px;
+  }
+}
